@@ -17,16 +17,15 @@ Antes de comezar a enfrentarse a este reto, es imprescindible tener claros los c
 
 A continuación, se muestra el circuito donde correrá nuestro coche:
 
-![image](https://user-images.githubusercontent.com/72757217/111838213-4b825900-88f9-11eb-8ed7-8be5a4fc1aa9.png)
+<img src="https://user-images.githubusercontent.com/72757217/111838213-4b825900-88f9-11eb-8ed7-8be5a4fc1aa9.png" width="400" height="400" />
 
 
 La velocidad variará de 0 a 5 unidades, lo que se traducirá en el programa de 0 a 120 km/h aproximadamente. 
 Por otra parte, la velocidad de giro seguirá la regla de la mano derecha, siendo positiva cuando se gire a izquierdas y negativa cuando se gire a derechas, variando de -0.5 a 0.5 aproximadamente. 
 
-En la siguiente imagen se muestra un velocidad de 65 km/h y una velocidad de giro nula:
-
-![image](https://user-images.githubusercontent.com/72757217/111838081-1aa22400-88f9-11eb-8d1f-e442829b0ae0.png)
-![image](https://user-images.githubusercontent.com/72757217/111837907-de6ec380-88f8-11eb-9371-c4551cf837bd.png)
+En la siguiente imagen se muestra un velocidad de 65 km/h y una velocidad de giro nula, puesto que la aguja está centrada:
+<img src="https://user-images.githubusercontent.com/72757217/111838081-1aa22400-88f9-11eb-8d1f-e442829b0ae0.png" width="200" height="200" />
+<img src="https://user-images.githubusercontent.com/72757217/111837907-de6ec380-88f8-11eb-9371-c4551cf837bd.png" width="200" height="200" />
 
 ## Primeros pasos
 Lo primero que se ha de hacer es la detección de la línea, para ello se trabajará en el espacio de trabajo HSV y se realizará una máscara en los rangos en los que se encuentre el rojo. 
@@ -36,14 +35,16 @@ Por ejemplo, en algunas ocasiones se puede observar la parte delantera de nuestr
 Para evitar dichos errores se realizará una limpieza con operaciones de dilatación y erosión.
 El resultado de dichas operaciones se muestra en la siguiente imagen:
 
-![image](https://user-images.githubusercontent.com/72757217/111777967-4818ae80-88b4-11eb-8f39-45ef4b71dac2.png)
+<img src="https://user-images.githubusercontent.com/72757217/111777967-4818ae80-88b4-11eb-8f39-45ef4b71dac2.png" width="500" height="360" />
+
+
 
 Tras detectar la línea hay que plantearse como realizar su seguimiento. En nuestro caso, se ha decidido trabajar con un punto colocado al horizonte de dicha línea para poder anticiparnos ante los cambio de líneas y curvas.
 Para ello se han limitado los rangos de la línea a los más lejanos, es decir, los más cercanos al centro de nuestra imagen. Una vez establecidos dichos límites se ha realizado el contorno de la máscara y se ha calculado su centro de masas para mostrar un punto central en la línea.
 De esta forma, se obtiene un punto de control situado en el centro de la línea en el horizonte.
-En la siguiente imagen se muestra el resultado obtenido:
+En la siguiente imagen se muestra el resultado obtenido y el rango aproximado en el que se ha trabajado:
 
-![image](https://user-images.githubusercontent.com/72757217/111778938-bb6ef000-88b5-11eb-8a2c-8e4921ef82a6.png)
+<img src="https://user-images.githubusercontent.com/72757217/111840690-1d067d00-88fd-11eb-8006-bc4ffcdf434a.png" width="500" height="360" />
 
 Ahora bien, ¿cómo podemos trabajar con ese punto de control? Es ahora cuando entran en juego los controladores proporcionales, derivativos e integrales. 
 La función de estos controladores es "controlar" el error. Dicho error será la diferencia entre la posición del punto y el centro de nuestra imagen contemplando únicamente el eje horizontal. 
