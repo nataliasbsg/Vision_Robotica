@@ -1,7 +1,7 @@
 # Práctica 1
 Esta práctica consiste en la realización de un control reactivo PID en código de Python implementado en un coche que corre en un circuito de Fórmula 1.
 El circuito contará con una línea roja en el medio de la carretera que habrá que seguir con un controlador de línea.
-Dicho control se realizará gracias a la imagen obtenida por una cámara situada en la parte frontal de coche, aun asi esta imagen no estará completamente centrada. 
+Dicho control se realizará gracias a la imagen obtenida por una cámara situada en la parte frontal de coche, esta imagen no estará completamente centrada. 
 El objetivo principal es un buen seguimiento de la línea, tanto en rectas como en curvas, y a una velocidad que permita dar una vuelta al circuito en un tiempo inferior a 1 minuto.
 
 
@@ -75,8 +75,8 @@ Esto se hará multiplicando una constante, Kd, por la diferencia entre el error 
 
 ![image](https://user-images.githubusercontent.com/72757217/111822359-fc7df900-88e3-11eb-97d6-78b65db88aa7.png)
 
-En este paso se observó una mejoría notoria en los resultados alcanzando valores inferiores a 1 minuto y con mayor control sobre la línea. 
-Sin embargo, se decidió optimizar más el código puesto que el cambio de recta a curva era demasiado brusco existiendo solo esta dos condiciones. Además, cabe destacar que en el circuito en el que se ha trabajado había curvas mucho más cerradas que otras, por lo que no se aprovechaba bien la velocidad en las curvas más abiertas.
+En este paso se observó una mejoría notoria en los resultados alcanzando valores de tiempo por vuelta inferiores a 1 minuto y con mayor control sobre la línea. 
+Sin embargo, se decidió optimizar más el código puesto que el cambio de recta a curva era demasiado brusco existiendo solo dos condiciones: condiciones de recta y de curva. Además, cabe destacar que en el circuito en el que se ha trabajado había curvas mucho más cerradas que otras, por lo que no se aprovechaba bien la velocidad en las curvas más abiertas.
 Partiendo de esta premisa se decidió partir de una velocidad máxima, Vmax, que se reduciría al aumentar el error para disminuirlo más fácil, para controlar dicho cambio se introdujo otra constante,Kp_v. 
 De esta forma quedaría una ecuación como la siguiente:
 
@@ -99,7 +99,7 @@ Si analizamos la tabla se puede observar que al aumentar las velocidad los tiemp
 Pero, si se aumenta más la velocidad el tiempo no mejorará debido a todas las inestabilidades que se crean. 
 En una velocidad de 4.4 se crean tantas inestabilidades que el coche no podrá correr el circuito sin salirse en alguna de sus vueltas.
 
-A continuación se presenta un vídeo en el que se muestra el funcionamiento con el controlador PD:
+A continuación, se presenta un vídeo en el que se muestra el funcionamiento con el controlador PD:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oaHpta7cris" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
