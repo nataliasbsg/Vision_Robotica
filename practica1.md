@@ -55,7 +55,7 @@ Es decir, se pretende que el punto se mantenga en la mitad del ancho de la image
 
 
 
-## Controlador proporcional
+## Controlador Proporcional (P)
 Un control proporcional consiste en la multiplicación de una constante o ganancia por el error calculado, en este caso la diferencia entre el centro de la imagen y el punto calculado en la línea roja (únicamente respecto al eje horizontal).
 
 ![image](https://user-images.githubusercontent.com/72757217/111822463-1c152180-88e4-11eb-9e76-b4028b353a56.png)
@@ -71,7 +71,7 @@ Los resultados de dicha prueba se muestran en el siguiente vídeo:
 
 
 
-## Controlador proporcional derivativo
+## Controlador Proporcional Derivativo (PD)
 Un control derivativo consiste en el control sobre la variación del error, suavizando la respuesta. 
 Esto se hará multiplicando una constante, Kd, por la diferencia entre el error actual y el anterior, tal y como se muestra en la siguiente imagen:
 
@@ -101,20 +101,20 @@ Si analizamos la tabla se puede observar que al aumentar las velocidad los tiemp
 Pero, si se aumenta más la velocidad el tiempo no mejorará debido a todas las inestabilidades que se crean. 
 En una velocidad de 4.4 se crean tantas inestabilidades que el coche no podrá correr el circuito sin salirse en alguna de sus vueltas.
 
-A continuación, se presenta un vídeo en el que se muestra el funcionamiento con el controlador PD (Proporcional Derivativo):
+A continuación, se presenta un vídeo en el que se muestra el funcionamiento con el controlador PD:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oaHpta7cris" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
 
-## Controlador proporcional derivativo integral
+## Controlador Proporcional Integral Derivativo (PID)
 Un control integral consiste en disminuir y eliminar el error en estado estacionario.
 Esto se hará multiplicando una constante, Ki, por la suma del error actual y del anterior, tal y como se muestra en la siguiente imagen:
 
 ![image](https://user-images.githubusercontent.com/72757217/111822313-ec661980-88e3-11eb-9a95-e72708c5454b.png)
 
-Al integrar un controlador PID (Proporcional Integral Derivativo) se puede observar que los tiempos realmente no presentan mucha mejoría, pero sí la adhesión a la línea y la disminución del error.
+Al integrar un controlador PID se puede observar que los tiempos realmente no presentan mucha mejoría, pero sí la adhesión a la línea y la disminución del error.
 A contincuación, se presenta una tabla resumen de varias pruebas que se realizaron modificando la velocidad máxima de nuestro coche.
 
 
