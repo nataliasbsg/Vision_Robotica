@@ -1,5 +1,5 @@
 # Práctica 1
-Esta práctica consiste en la realización de un control reactivo PID implementado en un coche que corre en un circuito de Fórmula 1 implementando un código de Python.
+Esta práctica consiste en la realización de un control reactivo PID en código de Python implementado en un coche que corre en un circuito de Fórmula 1.
 El circuito contará con una línea roja en el medio de la carretera que habrá que seguir con un controlador de línea.
 Dicho control se realizará gracias a la imagen obtenida por una cámara situada en la parte frontal de coche, aun asi esta imagen no estará completamente centrada. 
 El objetivo principal es un buen seguimiento de la línea, tanto en rectas como en curvas, y a una velocidad que permita dar una vuelta al circuito en un tiempo inferior a 1 minuto.
