@@ -137,7 +137,7 @@ Tras un pequeño reajuste se obtuvieron los siguientes resultados:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/beoGeE6gHhw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-- Modo **standard**: realiza la vuelta en un buen tiempo, pero en las curvas es más brusco. Es capaz de realizar una vuelta completa en 32 segundos.
+- Modo **estándar**: realiza la vuelta en un buen tiempo, pero en las curvas es más brusco. Es capaz de realizar una vuelta completa en 32 segundos.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KXr_CEd40U8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
