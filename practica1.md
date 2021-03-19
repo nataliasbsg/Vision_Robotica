@@ -25,6 +25,7 @@ Por otra parte, la velocidad de giro seguirá la regla de la mano derecha, siend
 
 En la siguiente imagen se muestra un velocidad de 65 km/h y una velocidad de giro nula, puesto que la aguja está centrada:
 
+
 <img src="https://user-images.githubusercontent.com/72757217/111838081-1aa22400-88f9-11eb-8d1f-e442829b0ae0.png" width="200" height="200" />
 <img src="https://user-images.githubusercontent.com/72757217/111837907-de6ec380-88f8-11eb-9371-c4551cf837bd.png" width="200" height="200" />
 
