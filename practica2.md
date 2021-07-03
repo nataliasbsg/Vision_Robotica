@@ -77,7 +77,7 @@ Los resultados anteriores se pueden mejorar pintando más puntos, pero el tiempo
 ![image](https://user-images.githubusercontent.com/72757217/124366059-2669ea00-dc4d-11eb-95d6-bbeeb1059054.png)
 
 
-Por último, se intentaron pintar 20.000 pero el programa no fue capaz debido a inestabilidades del docker o falta de puntos homólogos con un nivel de correspondencia mayor al 90%.
+Por último, se intentaron pintar 20.000 pero el programa no fue capaz debido a que se  pierde la conexión con el Docker antes de poder pintar los puntos.
 
 
 
