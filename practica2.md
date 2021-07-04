@@ -7,14 +7,10 @@ Con las imágenes obtenidas por estas cámaras se va a reconstruir en 3D la sigu
 ![image](https://user-images.githubusercontent.com/72757217/124360113-3b805200-dc28-11eb-8b68-6d1a0ac6c668.png)
 
 
-
-
 La escena es fotografiada pos las cámaras obteniendo las siguientes imágenes:
 
 
 ![image](https://user-images.githubusercontent.com/72757217/124362824-b7ce6180-dc37-11eb-8993-42f932887b7e.png)
-
-
 
 
 En la siguiente página de [jdetobot](https://jderobot.github.io/RoboticsAcademy/exercises/ComputerVision/3d_reconstruction#theory) 
@@ -27,16 +23,11 @@ Lo primero que se hace es transformar las imágenes a escala de grises para pode
 ![image](https://user-images.githubusercontent.com/72757217/124365549-1b14bf80-dc49-11eb-8209-f0828a49d96e.png)
 
 
-
-
-
 Con el fin de limpiar un poco los datos reduciendo el número de puntos se aplicará un filtro bilateral.
 De esta forma se obtienen las siguientes imágenes:
 
 
 ![image](https://user-images.githubusercontent.com/72757217/124358878-a038ae00-dc22-11eb-8f9c-797909083172.png)
-
-
 
 
 Las imágenes originales también se transformarán al espacio de color HSV, que es más robusto ante los cambios de iluminación.
