@@ -62,14 +62,14 @@ Se han pintado 10.000 puntos al azar (random) obteniendo los siguientes resultad
 ![image](https://user-images.githubusercontent.com/72757217/124365998-75634f80-dc4c-11eb-8192-c680ec77d652.png)
 
 
-Los resultados anteriores se pueden mejorar pintando más puntos, pero el tiempo de cómputo es mayor. En este caso se pintaron 15.000:
+Los resultados anteriores se pueden mejorar pintando más puntos, pero el tiempo de cómputo es mayor. En este caso se pintaron 15.000 puntos:
 
 
 ![image](https://user-images.githubusercontent.com/72757217/124366043-02a6a400-dc4d-11eb-95f9-56c8f92ed256.png)
 ![image](https://user-images.githubusercontent.com/72757217/124366059-2669ea00-dc4d-11eb-95d6-bbeeb1059054.png)
 
 
-Por último, se intentaron pintar 20.000 pero el programa no fue capaz debido a que se  pierde la conexión con el Docker antes de poder pintar los puntos.
+Por último, se intentaron pintar 20.000 puntos, pero el programa no fue capaz debido a que se  pierde la conexión con el Docker antes de poder pintar los puntos.
 
 
 
