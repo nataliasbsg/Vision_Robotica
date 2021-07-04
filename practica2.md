@@ -7,7 +7,7 @@ Con las imágenes obtenidas por estas cámaras se va a reconstruir en 3D la sigu
 ![image](https://user-images.githubusercontent.com/72757217/124360113-3b805200-dc28-11eb-8b68-6d1a0ac6c668.png)
 
 
-La escena es fotografiada pos las cámaras obteniendo las siguientes imágenes:
+La escena es fotografiada por las cámaras obteniendo las siguientes imágenes:
 
 
 ![image](https://user-images.githubusercontent.com/72757217/124362824-b7ce6180-dc37-11eb-8993-42f932887b7e.png)
@@ -23,7 +23,7 @@ Lo primero que se hace es transformar las imágenes a escala de grises para pode
 ![image](https://user-images.githubusercontent.com/72757217/124365549-1b14bf80-dc49-11eb-8209-f0828a49d96e.png)
 
 
-Con el fin de limpiar un poco los datos reduciendo el número de puntos se aplicará un filtro bilateral.
+Con el fin de limpiar un poco los datos reduciendo el número de puntos se aplicará un filtro bilateral. Se almacenan las posiciones de todos los píxeles donde se han encontrado bordes, de esta forma se obtienen los puntos de interés que serán los que se utilizarán para buscar los homólogos en la imagen derecha.
 De esta forma se obtienen las siguientes imágenes:
 
 
@@ -44,9 +44,8 @@ A continuación, se calcula el rayo de retroproyección de la cámara izquierda 
 A partir del rayo de retroproyección se crea una máscara que contiene la línea epipolar. Para ello, se toman dos puntos del rayo de retroproyección y se proyectan sobre la imagen de la derecha.
 
 
-Para encontrar los puntos homólogos a partir de esta epipolar se utiliza la función matchTemplate. Con la función minMaxLoc se encuentran los puntos con más correspondencia.
-Además, para considerar homólogos dos puntos su coeficiente de correspondecia ha de ser superior al 90%.
-Una vez obtenidos se pueden calcular los rayos de retroproyección y ver dónde se cruzan. Debido a que las líneas de retroproyección no son perfectas habrá una distancia b entre estos rayos. Para minimizar y solventar ese error se calcula una solución por mínimos cuadrados a partir del punto medio de la distancia que separa ambas líneas (b/2).
+Para encontrar los puntos homólogos a partir de esta epipolar se utilizan parches de 11x11 que recorren la imagen buscando las correspondencias con la función matchTemplate de OpenCV. A continuación se utiliza la función minMaxLoc, la cual devuelve el valor de lo que "encajan" los parches calculados devolviendo el valor de correspondencia de estos. En este caso, para considerar homólogos dos puntos su coeficiente de correspondecia ha de ser superior al 90%.
+Una vez obtenidos se pueden calcular los rayos de retroproyección y ver dónde se cruzan. Debido a que las líneas de retroproyección no son perfectas habrá una distancia b entre estos rayos. Para minimizar y solventar ese error se calcula una solución por mínimos cuadrados a partir del punto medio de la distancia que separa ambas líneas (b/2). En la siguiente imagen se ilustra el problema en cuestión:
 
 ![image](https://user-images.githubusercontent.com/72757217/124365799-9a56c300-dc4a-11eb-843b-fa963330f325.png)
 Fuente: José Miguel Buenaposada Biencinto.
@@ -55,7 +54,7 @@ Fuente: José Miguel Buenaposada Biencinto.
 ## Resultados
 
 
-Se han pintado 10.000 puntos al azar (random) obteniendo los siguientes resultados:
+Se han pintado 10.000 puntos seleccionados al azar (random) que cumplian las condiciones anteriores obteniendo los siguientes resultados:
 
 
 ![image](https://user-images.githubusercontent.com/72757217/124365972-3f25d000-dc4c-11eb-8225-5d43c5395490.png)
