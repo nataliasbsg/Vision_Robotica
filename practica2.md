@@ -14,7 +14,7 @@ La escena es fotografiada por las cámaras obteniendo las siguientes imágenes:
 
 
 En la siguiente página de [jdetobot](https://jderobot.github.io/RoboticsAcademy/exercises/ComputerVision/3d_reconstruction#theory) 
-se encuentran explicados todos los pasos a seguir para poder trabajar con [Unibotics](https://unibotics.org/academy/exercise/3d_reconstruction/).
+se encuentran explicados todos los pasos a seguir para poder trabajar con [Unibotics](https://unibotics.org/academy/exercise/3d_reconstruction/), comprender los conocimientos fundamentales y realizar esta práctica.
 
 
 Lo primero que se hace es transformar las imágenes a escala de grises para poder aplicar el algoritmo de Canny y poder extraer los bordes.
