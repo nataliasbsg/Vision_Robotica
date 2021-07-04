@@ -51,6 +51,7 @@ Una vez obtenidos se pueden calcular los rayos de retroproyección y ver dónde 
 ![image](https://user-images.githubusercontent.com/72757217/124365799-9a56c300-dc4a-11eb-843b-fa963330f325.png)
 Fuente: José Miguel Buenaposada Biencinto.
 
+
 ## Resultados
 
 
